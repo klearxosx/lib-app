@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Login/Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #4a6ee0;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .header p {
+      margin-top: 8px;
+      opacity: 0.9;
+      font-size: 15px;
+    }
+
+    .options {
+      padding: 30px 20px;
+    }
+
+    .option-card {
+      background-color: #f8f9fd;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 2px solid #eaeef5;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .option-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(74, 110, 224, 0.1);
+      border-color: #4a6ee0;
+    }
+
+    .option-card.login {
+      border-top: 5px solid #4a6ee0;
+    }
+
+    .option-card.register {
+      border-top: 5px solid #6bcd5a;
+    }
+
+    .option-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .option-card h2 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .option-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background-color: #4a6ee0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      background-color: #3a5ecf;
+    }
+
+    .register .btn {
+      background-color: #6bcd5a;
+    }
+
+    .register .btn:hover {
+      background-color: #5bb84a;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        max-width: 100%;
+      }
+
+      .header {
+        padding: 20px 15px;
+      }
+
+      .options {
+        padding: 20px 15px;
+      }
+
+      .option-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>The library is for members only!</h1>
+    <p>Choose an option to continue</p>
+  </div>
+
+  <div class="options">
+    <div class="option-card login" onclick="selectOption('login')">
+      <div class="option-icon">🔐</div>
+      <h2>Login</h2>
+      <p>Already have an account? Sign in here.</p>
+      <a href="/home" class="btn" onclick="selectOption('login')">Go to Login</a>
+    </div>
+
+    <div class="option-card register" onclick="selectOption('register')">
+      <div class="option-icon">📝</div>
+      <h2>Register</h2>
+      <p>New here? Create an account to enter the library.</p>
+      <a href="/user_register" class="btn" onclick="selectOption('register')">Create Account</a>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>
